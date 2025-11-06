@@ -29,9 +29,21 @@
         </div>
     </div>
 
-    <!-- 引入Three.js库 -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.168.0/build/three.module.js"
+            }
+        }
+    </script>
+    <!-- OrbitControls -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three/addons/": "https://unpkg.com/three@0.168.0/examples/jsm/"
+            }
+        }
+    </script>
     <!-- 引入TWEEN.js用于平滑动画 -->
     <script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4/dist/tween.umd.js"></script>
     <!-- 主要脚本 -->

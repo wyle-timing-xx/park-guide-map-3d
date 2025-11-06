@@ -1,6 +1,9 @@
 // 公园3D导游地图主脚本
 // 使用Three.js创建3D场景并实现交互功能
 
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
 // 场景常量
 const SCENE_SIZE = 50; // 地图场景大小
 const CHARACTER_SPEED = 2; // 小人移动速度
@@ -101,7 +104,7 @@ function initScene() {
     document.getElementById('scene-container').appendChild(renderer.domElement);
     
     // 添加轨道控制，方便旋转和缩放视图
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true; // 添加阻尼效果使控制更平滑
     controls.dampingFactor = 0.05;
     controls.screenSpacePanning = false;
