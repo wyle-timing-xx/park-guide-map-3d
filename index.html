@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公园3D导游地图</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="scene-container"></div>
+        
+        <div id="info-panel">
+            <h1>公园导览地图</h1>
+            <div id="current-location">
+                <p>当前位置: <span id="location-name">入口</span></p>
+            </div>
+            <div id="attractions">
+                <h2>景点列表</h2>
+                <ul id="attractions-list">
+                    <!-- 景点列表会通过JavaScript动态生成 -->
+                </ul>
+            </div>
+            <div id="instructions">
+                <p>点击景点名称让小人前往该位置</p>
+                <p>拖动鼠标可以旋转视角</p>
+                <p>滚轮可以缩放视图</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Three.js库 -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- 引入TWEEN.js用于平滑动画 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tweenjs/tween.js@18.6.4/dist/tween.umd.js"></script>
+    <!-- 主要脚本 -->
+    <script src="main.js" type="module"></script>
+</body>
+</html>
